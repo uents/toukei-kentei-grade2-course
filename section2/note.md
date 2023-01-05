@@ -75,9 +75,9 @@
   $$ s_{xy} = \frac{1}{n} \Sigma_{i=1}^n (x_i - \bar{x}) (y_i - \bar{y}) $$
 
 
-* 相関係数： $s_{xy}$ の $x, y$ の単位(スケール)の影響を除いたもの
+* 相関係数 $r_{xy}$ ： $s_{xy}$ の $x, y$ の単位(スケール)の影響を除いたもの
 
-  $$ \frac{s_{xy}}{s_{x} s_{y}} = \frac{1}{n} \Sigma_{i=1}^n \frac{(x_i - \bar{x})}{s_x} \frac{(y_i - \bar{y})}{s_y} $$
+  $$ r_{xy} = \frac{s_{xy}}{s_{x} s_{y}} = \frac{1}{n} \Sigma_{i=1}^n \frac{(x_i - \bar{x})}{s_x} \frac{(y_i - \bar{y})}{s_y} $$
 
   * 相関係数は必ず $[-1.0, +1.0]$ の範囲となる
   * 2変数の相関性が高いほど相関係数は $-1.0, +1.0$ に近づく
@@ -94,6 +94,21 @@
 
   $$ r_{(xy \cdot z)} = \frac{r_{xy} - r_{xz} r_{zy}}{\sqrt{1 - r_{xy}^2}{\sqrt{1- r_{zy}^2}}} $$
 
+## 回帰直線
 
-  
+$ \hat{y} = \hat{\alpha} + \hat{\beta} x_i $ という線形式で2つの量的変数の関係を記述。（ $\hat{}$ は推定値）
+
+| 項目 | 式 |
+| --- | --- |
+| 残差 $ e_i $ | $ y_i - \hat{y}_i = y_i - ( \hat{\alpha} + \hat{\beta} x_i ) $ |
+| 残差平方和 $ S(\hat{\alpha}, \hat{\beta}) $ | $ \Sigma_{i=1}^n e_i^2 = \Sigma_{i=1}^n ( y_i - \hat{y}_i )^2 $ |
+
+この残差平方和の最小二乗法により $\hat{\alpha}, \hat{\beta}$ を推定
+
+| 項目 | 式 |
+| --- | --- |
+| 回帰係数 $\hat{\beta}$ | $\frac{s_{xy}}{s_{xx}} = r_{xy} \frac{s_y}{s_x} $ （ $r_{xy}$ は相関係数 ）|
+| 定数項 $\hat{\alpha}$ | $\bar{y} - \hat{\beta} \bar{x}$ （ $\bar{}$ は平均 ） |
+
+回帰直線は $( \bar{x}, \bar{y} )$ （＝ $x, y$ の重心）を必ず通るという性質を持つ
 
