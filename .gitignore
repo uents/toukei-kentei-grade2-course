@@ -1,3 +1,6 @@
 # .gitignore
 
-textbooks/
+.venv/
+.vscode/
+.__pycache__/
+*.pyc
