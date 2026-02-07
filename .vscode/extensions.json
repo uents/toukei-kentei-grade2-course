@@ -1,21 +1,17 @@
 {
-    "recommendations": [
-        // GitHub
-        "github.copilot",
-        "gitHub.copilot-chat",
-        "github.vscode-github-actions",
-
-        // Markdown
-        "yzhang.markdown-all-in-one",
-        "shd101wyy.markdown-preview-enhanced",
-
-        // Python
-        "ms-python.python",
-        "ms-python.debugpy",
-        "ms-python.mypy-type-checker",
-        "charliermarsh.ruff",
-
-        // AWS
-        "amazonwebservices.aws-toolkit-vscode",
-    ]
+  "recommendations": [
+    // GitHub
+    "gitHub.copilot-chat",
+    "github.vscode-github-actions",
+    // Markdown
+    "yzhang.markdown-all-in-one",
+    "shd101wyy.markdown-preview-enhanced",
+    // Python
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.mypy-type-checker",
+    "charliermarsh.ruff",
+    // AWS
+    "amazonwebservices.aws-toolkit-vscode",
+  ]
 }
