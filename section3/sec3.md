@@ -467,8 +467,64 @@ V[X - Y] &= V[X] + V[Y] - 2 \mathrm{Cov}[X,Y] \\
 \mathrm{Cov}[X,Y] = 0, \quad \rho_{xy} = 0
 ```
 
+このことより
+
+```math
+\begin{align*}
+V[X + Y] &= V[X] + V[Y] + 2\mathrm{Cov}[X,Y] \\
+         & = V[X] + V[Y]
+\end{align*}
+```
+
 > [!NOTE]
 > 小テストでのおさらい
 > * $E[aX + b] = aE[X] + b$
 > * $V[aX + b] = a^2V[X]$
 
+
+## 32. 標本平均と期待値
+
+同一の確率分布に従う互いに独立な標本の平均を考える。
+
+2つの確率変数が互いに独立:
+
+```math
+Cov[X,Y] = 0, \quad Cov[X_i,X_j] = 0 \quad (i \neq j)
+```
+
+前提:
+
+* $X_1, X_2, \ldots, X_n \sim \text{i.i.d. } N(\mu, \sigma^2)$ のとき
+  （$X_i$ は独立かつ平均 $\mu$ 、分散 $\sigma^2$ の同一の正規分布に従う）
+* $X_1, X_2, \ldots, X_n$ の平均 $\bar{X} = \frac{1}{n} \Sigma_{i=1}^n X_i$ を考える
+
+期待値: $E[\bar{X}]$
+
+```math
+\begin{align*}
+&  E[(X_1 + X_2 + \ldots + X_n)/n] \\
+&= E[(X_1 + X_2 + \ldots + X_n)]/n \\
+&= (E[X_1] + E[X_2] + \ldots + E[X_n])/n \\
+&= n \mu / n \\
+&= \mu
+\end{align*}
+```
+
+分散: $V[\bar{X}]$
+
+```math
+\begin{align*}
+&  V[(X_1 + X_2 + \ldots + X_n)/n] \\
+&= V[(X_1 + X_2 + \ldots + X_n)]/n^2 \\
+\end{align*}
+```
+
+👉 $X_1, X_2, \ldots, X_n$ が互いに独立であることから、
+
+```math
+\begin{align*}
+&= (V[X_1] + V[X_2] + \ldots + V[X_n])/n^2 \\
+&= n \sigma^2 / n^2 \\
+&= \sigma^2 / n
+\end{align*}
+```
