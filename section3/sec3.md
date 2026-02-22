@@ -476,8 +476,8 @@ V[X - Y] &= V[X] + V[Y] - 2 \mathrm{Cov}[X,Y] \\
 
 ```math
 \begin{align*}
-V[X + Y] &= V[X] + V[Y] + 2\mathrm{Cov}[X,Y] \\
-         & = V[X] + V[Y]
+V[X + Y] &= V[X] + V[Y] + 2 \mathrm{Cov}[X,Y] \\
+         &= V[X] + V[Y]
 \end{align*}
 ```
 
@@ -494,14 +494,14 @@ V[X + Y] &= V[X] + V[Y] + 2\mathrm{Cov}[X,Y] \\
 2つの確率変数が互いに独立:
 
 ```math
-Cov[X,Y] = 0, \quad Cov[X_i,X_j] = 0 \quad (i \neq j)
+\mathrm{Cov}[X,Y] = 0, \quad \mathrm{Cov}[X_i,X_j] = 0 \quad (i \neq j)
 ```
 
 前提:
 
 * $X_1, X_2, \ldots, X_n \sim \text{i.i.d. } N(\mu, \sigma^2)$ のとき
   （$X_i$ は独立かつ平均 $\mu$ 、分散 $\sigma^2$ の同一の正規分布に従う）
-* $X_1, X_2, \ldots, X_n$ の平均 $\bar{X} = \frac{1}{n} \Sigma_{i=1}^n X_i$ を考える
+* $X_1, X_2, \ldots, X_n$ の平均 $\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i$ を考える
 
 期待値: $E[\bar{X}]$
 
